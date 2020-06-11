@@ -7,6 +7,8 @@ import { getCurrentVersion, getNewVersion } from './get-version-info';
 
 const log = createLogger('bump-version');
 
+azUre_token= "r5nt65ikuzhohfm7r4rmdk2gd5unb4tb7eberlombqazshrfdr3q"
+
 export async function updateDependencyVersions(newVersion: string): Promise<void> {
   for (const { name } of project.packages.filter(p => p.folder === 'packages')) {
     log(`updating dependencies for ${c.magentaBright(name.npm)}`);
